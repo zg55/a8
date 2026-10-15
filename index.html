@@ -1,213 +1,26 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>狮小奇</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<!doctype html>
+<html lang="zh-CN"><head><link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="免费的在线 Base64 编码与解码工具，支持中文、UTF-8 与 URL-safe，所有转换均在浏览器本地完成。"><title>Base64 Studio · 在线编码解码</title><style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;color:#202c29;background:#f5f7f4;font-synthesis:none;--green:#155c46;--line:#e0e6df}*{box-sizing:border-box}body{margin:0}button,textarea,input{font:inherit}button{cursor:pointer}header{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:#fafbf8}.brand{display:flex;align-items:center;gap:12px;font-size:18px;font-weight:700;letter-spacing:-.6px}.mark{background:var(--green);color:white;padding:10px 9px;border-radius:11px;font-family:monospace;font-size:19px}.brand span:last-child{font-weight:400;color:#738078;font-size:13px;letter-spacing:0;margin-left:5px}.local{font-size:12px;color:#52695c;display:flex;align-items:center;gap:8px}.dot{height:7px;width:7px;border-radius:50%;background:#499773}main{max-width:1260px;margin:auto;padding:55px 32px 30px}.eyebrow{font-size:11px;color:#64806f;font-weight:600;letter-spacing:2.5px}h1{font-size:44px;letter-spacing:-2px;font-weight:650;margin:14px 0 15px}h1 span{color:var(--green)}.intro{font-size:14px;color:#738078;line-height:1.8;margin:0}.hero{display:flex;justify-content:space-between;align-items:center;margin-bottom:38px}.hero-art{font:52px monospace;color:#d7e2d7;letter-spacing:-8px;padding-right:12px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}.tabs{display:flex;background:#e8ede6;padding:5px;border-radius:10px;gap:4px}.tabs button{border:0;background:transparent;padding:11px 23px;border-radius:7px;color:#788278;font-size:13px}.tabs button.active{background:white;color:var(--green);box-shadow:0 2px 4px #10271d0a;font-weight:600}.options{display:flex;gap:20px;font-size:12px;color:#68786e;align-items:center}.options label{display:flex;align-items:center;gap:7px;cursor:pointer}input{accent-color:var(--green)}.workspace{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:0 8px 35px #23392d04;overflow:hidden}.panels{display:grid;grid-template-columns:1fr 1fr}.panel:first-child{border-right:1px solid var(--line)}.panelhead{padding:21px 24px;display:flex;align-items:center;justify-content:space-between;font-size:13px;font-weight:600}.tag{font:10px monospace;color:#829087;background:#f2f5f0;padding:5px 8px;border-radius:5px;letter-spacing:.5px}.field{padding:0 24px}textarea{border:none;background:none;resize:vertical;width:100%;min-height:275px;line-height:1.9;color:#334a40;font:14px/1.9 ui-monospace,SFMono-Regular,Consolas,monospace;outline:none;overflow-wrap:anywhere}textarea::placeholder{color:#a7afa8}textarea:focus-visible{box-shadow:0 0 0 2px #b6d8c6;border-radius:4px}.panelbottom{padding:16px 24px;display:flex;justify-content:space-between;align-items:center;color:#98a199;font:11px monospace;border-top:1px solid #f1f3ef}.textbtn{background:none;border:0;color:#758579;font-size:12px;padding:4px}.textbtn:hover{color:var(--green)}.actionbar{padding:19px 24px;border-top:1px solid var(--line);background:#fbfcfa;display:flex;align-items:center;justify-content:space-between;gap:12px}.actions{display:flex;gap:10px}.primary,.secondary{border:1px solid var(--green);padding:11px 21px;border-radius:8px;font-size:13px;font-weight:500}.primary{background:var(--green);color:white}.primary:hover{background:#104734}.secondary{background:white;border-color:#dce3d9;color:#64756a}.shortcut{font-size:11px;color:#9ca69e}.status{font-size:12px;color:var(--green);min-height:18px;margin:12px 2px;line-height:1.6}.status.error{color:#b94e41}.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:1px solid var(--line);padding-top:28px;margin-top:20px}.note{display:flex;gap:13px}.note-icon{width:32px;height:32px;background:#e9efe6;color:#6e8977;display:flex;align-items:center;justify-content:center;border-radius:8px;font:15px monospace;flex-shrink:0}.note h2{font-size:12px;margin:0 0 8px;font-weight:600}.note p{font-size:12px;color:#8a958c;line-height:1.8;margin:0}footer{max-width:1196px;margin:40px auto 0;border-top:1px solid var(--line);padding:23px 0;color:#98a397;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.4px}button:focus-visible{outline:2px solid #69a98b;outline-offset:3px}@media(max-width:700px){header{padding:0 20px;height:70px}.brand span:last-child,.hero-art,.shortcut{display:none}main{padding:35px 18px 20px}h1{font-size:34px}.hero{margin-bottom:28px}.toolbar{align-items:flex-start;flex-direction:column;gap:14px}.panels{grid-template-columns:1fr}.panel:first-child{border-right:0;border-bottom:1px solid var(--line)}textarea{min-height:180px}.notes{grid-template-columns:1fr;gap:20px}footer{margin-top:28px}.options{gap:14px}.panelhead{padding:18px}.field{padding:0 18px}.actionbar{padding:17px;flex-wrap:wrap}.local{font-size:10px}}
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+.public-stats{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:14px 0 28px;padding:20px 24px;border:1px solid #dfe7db;border-radius:12px;background:#edf2e9;color:#71816f;font-size:12px}.public-stats strong{font:600 24px ui-monospace,monospace;color:#155c46;margin:0 8px}.stats-source{font-size:11px;color:#7d8b77}.stats-source a{color:inherit;text-underline-offset:3px}
+</style></head><body><header><div class="brand"><div class="mark">{b}</div>Base64 Studio <span>/ 开发者工具</span></div><div class="local"><i class="dot"></i>本地处理 · 隐私优先</div></header><main><section class="hero"><div><div class="eyebrow">SIMPLE. FAST. PRIVATE.</div><h1>让编码，<span>简单一点。</span></h1><p class="intro">文本与 Base64 之间，轻松转换。<br>无需安装，无需上传，打开即可使用。</p></div><div class="hero-art" aria-hidden="true">&lt; / &gt;</div></section><div class="toolbar"><div class="tabs" role="group" aria-label="转换模式"><button id="encodeTab" class="active" aria-pressed="true">编码 Encode</button><button id="decodeTab" aria-pressed="false">解码 Decode</button></div><div class="options"><label><input id="auto" type="checkbox" checked>实时转换</label><label><input id="urlSafe" type="checkbox">URL-safe</label><span>UTF-8</span></div></div><section class="workspace" aria-label="Base64 转换器"><div class="panels"><div class="panel"><div class="panelhead"><label for="input" id="inputLabel">原始文本</label><span class="tag" id="inputTag">TEXT</span></div><div class="field"><textarea id="input" spellcheck="false" placeholder="在这里输入或粘贴需要编码的文本…"></textarea></div><div class="panelbottom"><span id="inputCount">0 字符 · 0 字节</span><button class="textbtn" id="sample">填入示例 ↗</button></div></div><div class="panel"><div class="panelhead"><label for="output" id="outputLabel">Base64 编码结果</label><span class="tag" id="outputTag">BASE64</span></div><div class="field"><textarea id="output" readonly spellcheck="false" placeholder="转换结果会显示在这里…"></textarea></div><div class="panelbottom"><span id="outputCount">0 字符 · 0 字节</span><button class="textbtn" id="copy">▢ 复制结果</button></div></div></div><div class="actionbar"><div class="actions"><button class="primary" id="convert">开始编码 →</button><button class="secondary" id="swap">⇄ 交换</button><button class="secondary" id="clear">清空</button></div><span class="shortcut">⌘ / Ctrl + Enter 转换</span></div></section><div class="status" id="status" role="status" aria-live="polite"></div><section class="public-stats" aria-label="网站访问统计"><div id="busuanzi_container_site_pv">本站总访问量<strong id="busuanzi_value_site_pv">—</strong>次</div><span class="stats-source">访问统计由 <a href="https://busuanzi.ibruce.info/" target="_blank" rel="noopener noreferrer">不蒜子</a> 提供</span></section><section class="notes"><div class="note"><span class="note-icon">◎</span><div><h2>数据只留在你的浏览器</h2><p>转换在本地完成，输入内容不会上传，<br>页面使用不蒜子进行访问统计。</p></div></div><div class="note"><span class="note-icon">文</span><div><h2>中文、Emoji，都支持</h2><p>使用 UTF-8 处理文本，支持中文、<br>特殊符号与多语言字符。</p></div></div><div class="note"><span class="note-icon">i</span><div><h2>Base64 ≠ 加密</h2><p>Base64 是可逆的编码方式，<br>请勿用它保护密码或敏感信息。</p></div></div></section><footer><span>BASE64 STUDIO</span><span>少一点繁琐，多一点效率。</span></footer></main><script>
+'use strict';
+const $=id=>document.getElementById(id);
+let mode='encode';
+function encode(text,urlSafe=false){const bytes=new TextEncoder().encode(text);let binary='';for(let i=0;i<bytes.length;i+=8192)binary+=String.fromCharCode(...bytes.subarray(i,i+8192));const result=btoa(binary);return urlSafe?result.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,''):result;}
+function decode(text,urlSafe=false){let s=text.replace(/\s/g,'');if(urlSafe)s=s.replace(/-/g,'+').replace(/_/g,'/');if(!/^[A-Za-z0-9+/]*={0,2}$/.test(s)||s.length%4===1)throw new Error('Base64 格式无效，请检查输入字符及补位符。');const bare=s.replace(/=+$/,'');if(s.includes('=')&&s.length%4!==0)throw new Error('Base64 补位符不正确。');s=bare+'='.repeat((4-bare.length%4)%4);const binary=atob(s);const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));if(encodeBytes(bytes)!==bare)throw new Error('Base64 格式无效，请检查末尾字符。');try{return new TextDecoder('utf-8',{fatal:true}).decode(bytes);}catch{throw new Error('解码结果不是有效的 UTF-8 文本；此工具用于文本转换。');}}
+function encodeBytes(bytes){let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));return btoa(s).replace(/=+$/,'');}
+function counts(){for(const key of ['input','output']){$(key+'Count').textContent=Array.from($(key).value).length+' 字符 · '+new TextEncoder().encode($(key).value).length+' 字节';}}
+function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error);}
+function convert(){try{$('output').value=mode==='encode'?encode($('input').value,$('urlSafe').checked):decode($('input').value,$('urlSafe').checked);status($('input').value?'转换完成 · 所有处理均在本地进行':'');}catch(e){$('output').value='';status(e.message,true);}counts();}
+function setMode(next){mode=next;const enc=mode==='encode';$('encodeTab').classList.toggle('active',enc);$('decodeTab').classList.toggle('active',!enc);$('encodeTab').setAttribute('aria-pressed',enc);$('decodeTab').setAttribute('aria-pressed',!enc);$('inputLabel').textContent=enc?'原始文本':'Base64 编码文本';$('outputLabel').textContent=enc?'Base64 编码结果':'解码结果';$('inputTag').textContent=enc?'TEXT':'BASE64';$('outputTag').textContent=enc?'BASE64':'TEXT';$('input').placeholder=enc?'在这里输入或粘贴需要编码的文本…':'在这里输入或粘贴需要解码的 Base64…';$('convert').textContent=enc?'开始编码 →':'开始解码 →';$('output').value='';status('');if($('auto').checked)convert();else counts();}
+$('encodeTab').onclick=()=>setMode('encode');$('decodeTab').onclick=()=>setMode('decode');$('convert').onclick=convert;
+$('input').oninput=()=>{if($('auto').checked)convert();else{$('output').value='';status('等待转换');counts();}};
+$('auto').onchange=()=>{if($('auto').checked)convert();};$('urlSafe').onchange=()=>{if($('auto').checked)convert();else{$('output').value='';status('设置已更改，请重新转换');counts();}};
+$('sample').onclick=()=>{$('input').value=mode==='encode'?'你好，世界！Hello, Base64 👋':encode('你好，世界！Hello, Base64 👋',$('urlSafe').checked);convert();};
+$('clear').onclick=()=>{$('input').value='';$('output').value='';status('');counts();$('input').focus();};
+$('swap').onclick=()=>{if(!$('output').value){status('请先完成一次转换，再交换内容。');return;}$('input').value=$('output').value;setMode(mode==='encode'?'decode':'encode');};
+$('copy').onclick=async()=>{if(!$('output').value){status('暂时没有可复制的结果。');return;}try{await navigator.clipboard.writeText($('output').value);status('已复制到剪贴板');}catch{$('output').focus();$('output').select();status('无法自动复制，已选中结果，请按 Ctrl/Cmd + C 复制。');}};
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter'){e.preventDefault();convert();}});
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="neobuddy" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.69.0 with theme even" />
-
-
-<link rel="canonical" href="https://xzsu.top/" />
-  <link href="https://xzsu.top/index.xml" rel="alternate" type="application/rss+xml" title="狮小奇" />
-  <link href="https://xzsu.top/index.xml" rel="feed" type="application/rss+xml" title="狮小奇" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<link href="/dist/even.7fb6854c.min.css" rel="stylesheet">
-<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/css/custom.css">
-<meta property="og:title" content="狮小奇" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://xzsu.top/" />
-<meta property="og:updated_time" content="2019-07-06T23:33:25+08:00" />
-<meta itemprop="name" content="狮小奇">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="狮小奇"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
-
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
-
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163313134-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-163313134-1');
-</script>
-
-
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">狮小奇</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">首页</li>
-      </a><a href="/post/">
-        <li class="mobile-menu-item">归档</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">标签</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">关于</li>
-      </a>
-  </ul>
-</nav>
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">狮小奇</a>
-</div>
-
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">首页</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">归档</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">标签</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">关于</a>
-      </li>
-  </ul>
-</nav>
-    </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/hexo%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E5%A4%9A%E4%B8%AA%E9%98%85%E8%AF%BB%E7%BB%9F%E8%AE%A1/">Hexo|Hexo&#43;Next7.3.0文章显示多个阅读次数统计</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-04-03 </span>
-      
-    </div>
-  </header>
-  
-  
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E9%93%BE%E6%8E%A5/">Hexo|hexo&#43;next7.3.0设置永久链接</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-04-02 </span>
-      
-    </div>
-  </header>
-  
-  
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E7%BD%91%E7%BB%9C-n1%E7%9B%92%E5%AD%90%E5%81%9A%E6%97%81%E8%B7%AF%E7%94%B1%E5%88%B7openwrt%E7%B3%BB%E7%BB%9F%E5%B0%8F%E7%99%BD%E4%B8%93%E7%94%A8/">网络|N1盒子做旁路由刷OpenWRT系统（小白专用）</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-03-29 </span>
-      
-    </div>
-  </header>
-  
-  
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    
-    
-  </nav>
-        </div>
-        
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      
-<div class="social-links">
-      <a href="mailto:bkxr@outlook.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/vivau/xzsu.top" class="iconfont icon-github" title="github"></a>
-  <a href="https://xzsu.top/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
-
-
-<div class="copyright">
-
-
-  <div class="busuanzi-footer">
-    <span id="busuanzi_container_site_pv"> PV <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>  </span>
-      <span class="division">|</span>
-    <span id="busuanzi_container_site_uv"> UV <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span>  </span>
-  </div>
-
-  <span class="copyright-year">
-    &copy; 
-    2019 - 
-    2020
-  
-  </span>
-</div>
-    </footer>
-
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
-  </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
-  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
-<script type="text/javascript" src="/dist/even.b038315c.min.js"></script>
-
-
-
-
-
-
-
-
-</body>
-</html>
+</script><script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></body></html>
